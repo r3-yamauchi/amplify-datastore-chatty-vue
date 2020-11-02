@@ -11,6 +11,9 @@
     </div>
 
     <button @click="allDel">Delete all messages.</button>
+    <p>
+      <button @click="changeSync">changeSync</button>
+    </p>
 
   </div>
 </template>
@@ -19,10 +22,12 @@ import { Auth } from "aws-amplify";
 import { DataStore, Predicates, syncExpression } from "@aws-amplify/datastore";
 import { Chatty } from "./models";
 
+let rating = 5;
+
 DataStore.configure({
   syncExpressions: [
     syncExpression(Chatty, () => {
-      return (c) => c.rate('gt', 5).rate('lt', 7);
+      return (c) => c.rate('gt', rating);
     }),
   ]
 });
@@ -55,6 +60,12 @@ export default {
     this.subscription.unsubscribe();
   },
   methods: {
+    async changeSync() {
+      rating = 1;
+      await DataStore.stop();
+      await DataStore.start();
+      this.loadMessages();
+    },
     sendMessage() {
       const { rate, message } = this.form
       if (!rate || !message) return;
