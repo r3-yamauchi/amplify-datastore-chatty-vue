@@ -1,4 +1,10 @@
-type Chatty @model {
+type Chatty
+  @model
+  @auth(
+    rules: [
+      { allow: owner, ownerField: "user", operations: [create, update, delete, read] },
+    ])
+{
   id: ID!
   user: String!
   message: String!

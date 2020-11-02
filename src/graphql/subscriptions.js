@@ -2,8 +2,8 @@
 // this is an auto generated file. This will be overwritten
 
 export const onCreateChatty = /* GraphQL */ `
-  subscription OnCreateChatty {
-    onCreateChatty {
+  subscription OnCreateChatty($user: String!) {
+    onCreateChatty(user: $user) {
       id
       user
       message
@@ -16,8 +16,8 @@ export const onCreateChatty = /* GraphQL */ `
   }
 `;
 export const onUpdateChatty = /* GraphQL */ `
-  subscription OnUpdateChatty {
-    onUpdateChatty {
+  subscription OnUpdateChatty($user: String!) {
+    onUpdateChatty(user: $user) {
       id
       user
       message
@@ -30,8 +30,8 @@ export const onUpdateChatty = /* GraphQL */ `
   }
 `;
 export const onDeleteChatty = /* GraphQL */ `
-  subscription OnDeleteChatty {
-    onDeleteChatty {
+  subscription OnDeleteChatty($user: String!) {
+    onDeleteChatty(user: $user) {
       id
       user
       message
