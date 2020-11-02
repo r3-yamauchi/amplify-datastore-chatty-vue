@@ -17,6 +17,13 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
+                "rate": {
+                    "name": "rate",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": true,
+                    "attributes": []
+                },
                 "message": {
                     "name": "message",
                     "isArray": false,
@@ -44,5 +51,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "e552f24548a5055814c8abdba97ada0b"
+    "version": "9be9ec15472c7bd08c3a9c028964b553"
 };

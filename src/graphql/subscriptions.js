@@ -6,6 +6,7 @@ export const onCreateChatty = /* GraphQL */ `
     onCreateChatty {
       id
       user
+      rate
       message
       createdAt
       _version
@@ -20,6 +21,7 @@ export const onUpdateChatty = /* GraphQL */ `
     onUpdateChatty {
       id
       user
+      rate
       message
       createdAt
       _version
@@ -34,6 +36,7 @@ export const onDeleteChatty = /* GraphQL */ `
     onDeleteChatty {
       id
       user
+      rate
       message
       createdAt
       _version

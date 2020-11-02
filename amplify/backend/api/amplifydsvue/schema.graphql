@@ -1,6 +1,7 @@
 type Chatty @model {
   id: ID!
   user: String!
+  rate: Int!
   message: String!
   createdAt: AWSDateTime
 }

@@ -9,6 +9,7 @@ export const createChatty = /* GraphQL */ `
     createChatty(input: $input, condition: $condition) {
       id
       user
+      rate
       message
       createdAt
       _version
@@ -26,6 +27,7 @@ export const updateChatty = /* GraphQL */ `
     updateChatty(input: $input, condition: $condition) {
       id
       user
+      rate
       message
       createdAt
       _version
@@ -43,6 +45,7 @@ export const deleteChatty = /* GraphQL */ `
     deleteChatty(input: $input, condition: $condition) {
       id
       user
+      rate
       message
       createdAt
       _version

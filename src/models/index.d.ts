@@ -7,6 +7,7 @@ import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplif
 export declare class Chatty {
   readonly id: string;
   readonly user: string;
+  readonly rate: number;
   readonly message: string;
   readonly createdAt?: string;
   constructor(init: ModelInit<Chatty>);

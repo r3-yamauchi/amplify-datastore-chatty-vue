@@ -17,6 +17,7 @@ export const syncChatties = /* GraphQL */ `
       items {
         id
         user
+        rate
         message
         createdAt
         _version
@@ -34,6 +35,7 @@ export const getChatty = /* GraphQL */ `
     getChatty(id: $id) {
       id
       user
+      rate
       message
       createdAt
       _version
@@ -53,6 +55,7 @@ export const listChattys = /* GraphQL */ `
       items {
         id
         user
+        rate
         message
         createdAt
         _version
